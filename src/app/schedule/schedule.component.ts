@@ -1,10 +1,20 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from "@angular/core";
+import { ScheduleServiceService } from "../app/schedule-service.service";
 @Component({
-  selector: 'schedule',
-  templateUrl: './schedule.component.html',
+  selector: "schedule",
+  templateUrl: "./schedule.component.html",
 })
-export class ScheduleComponent {
+export class ScheduleComponent implements OnInit {
   itemsList = [];
-  constructor() { }
+
+  constructor(private scheduleService: ScheduleServiceService) {
+    this.scheduleService.getSendGuest().subscribe((p) => {
+      debugger;
+      this.itemsList = p;
+    });
+  }
+
+  putIterateDays() {}
+
+  ngOnInit() {}
 }
