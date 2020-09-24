@@ -9,12 +9,8 @@ export class ScheduleComponent implements OnInit {
 
   constructor(private scheduleService: ScheduleServiceService) {
     this.scheduleService.getSendGuest().subscribe((p) => {
-      debugger;
       this.itemsList = p;
     });
   }
-
-  putIterateDays() {}
-
   ngOnInit() {}
 }

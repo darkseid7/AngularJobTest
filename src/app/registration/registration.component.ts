@@ -65,11 +65,9 @@ export class RegistrationComponent {
       emptyArray.push(anyConverted);
     }
     debugger;
-    // 2020-06-20 to 2020-06-25
+
     return emptyArray;
   }
 
-  getItemsList() {
-    //getter for items[]
-  }
+  getItemsList() {}
 }
